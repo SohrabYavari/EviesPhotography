@@ -6,13 +6,13 @@ import Header from "@/Global/Header";
 const Why = () => {
   return (
     <>
-      <div id="why" className="flex flex-col w-full min-h-screen justify-center">
+      <div id="why" className="flex flex-col w-full container min-h-screen justify-center">
         <Header header="Why" />
 
         <div className="flex md:flex-row-reverse flex-col">
           <FadeComp className="p-2 basis-2/3">
             <figure>
-              <img src="" alt="" className="w-full h-96 bg-slate-500" />
+              <img src="" alt="" className="w-full h-96 bg-slate-100" />
             </figure>
           </FadeComp>
 

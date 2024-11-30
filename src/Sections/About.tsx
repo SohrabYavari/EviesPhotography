@@ -5,7 +5,7 @@ import Header from "@/Global/Header";
 const About = () => {
   return (
     <>
-      <div id="about-me" className="w-full flex flex-col justify-center">
+      <div id="about-me" className="w-full container flex flex-col justify-center">
         <Header header='About Me' />
 
         <SlideInDiv className="">

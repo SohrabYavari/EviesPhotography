@@ -1,4 +1,4 @@
-import Footer from './Global/Footer'
+import Footer from "./Global/Footer";
 import Navbar from "./Global/Navbar";
 import About from "./Sections/About";
 import Contact from "./Sections/Contact";
@@ -12,12 +12,10 @@ function App() {
       <div className="w-full flex flex-col items-center justify-center">
         <Navbar />
         <Hero />
-        <div className="container">
-          <About />
-          <Why />
-          <Portfolio />
-          <Contact />
-        </div>
+        <About />
+        <Why />
+        <Portfolio />
+        <Contact />
         <Footer />
       </div>
     </>

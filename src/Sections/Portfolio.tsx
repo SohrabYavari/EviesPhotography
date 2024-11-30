@@ -4,9 +4,10 @@ import Header from "@/Global/Header";
 const Portfolio = () => {
   return (
     <>
-      <div id="portfolio" className="w-full min-h-screen flex flex-col">
+      <div id="portfolio" className="w-full min-h-screen flex flex-col relative">
         <Header header="Portfolio" />
 
+        
           <BentoBox
             bentoWidth="full"
             rows={[
@@ -60,7 +61,7 @@ const Portfolio = () => {
               ],
             ]}
           />
-      </div>
+        </div>
     </>
   );
 };

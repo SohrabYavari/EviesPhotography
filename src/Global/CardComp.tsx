@@ -22,7 +22,7 @@ const CardComp = ({ header, description, image, imageBasis, length }: Props) => 
               <img
                 src={image}
                 alt=""
-                className={`w-full h-${length} bg-slate-500`}
+                className={`w-full h-${length} bg-slate-100`}
               />
             </figure>
           </div>

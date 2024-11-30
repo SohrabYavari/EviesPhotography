@@ -27,18 +27,19 @@ import { Calendar as CalendarIcon } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
-  name_2583268738: z.string(),
-  name_1845934336: z.string(),
+  fullName: z.string(),
+  emailAddress: z.string(),
   name_2101315316: z.string(),
-  name_8554314343: z.coerce.date(),
-  name_0597795542: z.string(),
+  availability: z.coerce.date(),
+  description: z.string(),
 });
 
 const Contact = () => {
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name_8554314343: new Date(),
+      availability: new Date(),
     },
   });
 
@@ -68,12 +69,17 @@ const Contact = () => {
           >
             <FormField
               control={form.control}
-              name="name_2583268738"
+              name="fullName"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" type="text" {...field} />
+                    <Input
+                      placeholder="John Doe"
+                      type="text"
+                      className="bg-white"
+                      {...field}
+                    />
                   </FormControl>
 
                   <FormMessage />
@@ -83,7 +89,7 @@ const Contact = () => {
             <div className="flex md:flex-row flex-col">
               <FormField
                 control={form.control}
-                name="name_1845934336"
+                name="emailAddress"
                 render={({ field }) => (
                   <FormItem className="w-full">
                     <FormLabel>Email Address</FormLabel>
@@ -91,6 +97,7 @@ const Contact = () => {
                       <Input
                         placeholder="Jdoe@example.com"
                         type="email"
+                        className="bg-white"
                         {...field}
                       />
                     </FormControl>
@@ -102,7 +109,7 @@ const Contact = () => {
 
               <FormField
                 control={form.control}
-                name="name_8554314343"
+                name="availability"
                 render={({ field }) => (
                   <FormItem className="flex flex-col justify-end md:pl-2 md:py-0 pt-10">
                     <FormLabel>Availability</FormLabel>
@@ -112,7 +119,7 @@ const Contact = () => {
                           <Button
                             variant={"outline"}
                             className={cn(
-                              "md:w-[240px] pl-3 text-left font-normal",
+                              "md:w-[240px] pl-3 text-left font-normal bg-white",
                               !field.value && "text-muted-foreground"
                             )}
                           >
@@ -141,7 +148,7 @@ const Contact = () => {
 
             <FormField
               control={form.control}
-              name="name_0597795542"
+              name="description"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>More about you</FormLabel>
@@ -160,7 +167,9 @@ const Contact = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full text-black">Submit</Button>
+            <Button type="submit" className="w-full text-black bg-secondary">
+              Submit
+            </Button>
           </form>
         </Form>
       </div>

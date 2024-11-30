@@ -75,7 +75,7 @@ const Hero = () => {
             />
           </FadeComp>
 
-          <SlideInDiv2 className="md:text-9xl text-7xl text-center absolute">
+          <SlideInDiv2 className="md:text-9xl text-6xl text-center absolute">
             <h1> Evie's photography </h1>
           </SlideInDiv2>
         </div>
