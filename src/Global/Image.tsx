@@ -14,7 +14,7 @@ const Image = ({ width, length, flexBasis, img }: Props) => {
         <img
           src={img}
           alt=""
-          className={`flex w-full bg-slate-100 hover:scale-105 ease-in-out duration-300`}
+          className={`flex w-full bg-slate-300 hover:scale-105 ease-in-out duration-300`}
           loading="lazy"
         />
       </SlideInDiv>

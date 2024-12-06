@@ -7,6 +7,7 @@ export default {
   ],
   safelist: [
     'h-40', 
+    'h-52', 
     'h-96',
     'h-full',
   ],

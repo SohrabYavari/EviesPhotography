@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <>
       <div id="home" className="w-full min-h-screen">
-        <div className="w-full flex justify-center items-center my-auto relative md:translate-y-3/4 translate-y-1/4">
+        <div className="w-full h-screen flex justify-center items-center absolute inset-0">
           <FadeComp>
             <BentoBox
               bentoWidth="screen"
